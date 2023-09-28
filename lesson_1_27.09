@@ -1,0 +1,93 @@
+-- 1. сотрудники работающие в департаменте с id 90
+--select * 
+--from Employees
+--where department_id = 90;
+
+
+--2.сотрудники зараатывают больше 5000
+--select *
+--from Employees
+--where salary > 5000
+
+--3.имя начинается на букву "L"
+--select *
+--from Employees
+--where first_name like'L%';
+
+
+--4. фамилия заканчивается на букву "D"
+--select *
+--from Employees
+--where last_name like '%d'
+
+--5. сотрудники фамилии в середине слова встречаются сочетания 'kk' or 'll'
+---select *
+--from Employees
+--where last_name like '_%kk%_' or last_name like '%_ll_%';
+
+--6.департменты у которых location_id 1700
+--select *
+--from Departments
+--where location_id = 1700
+
+
+--7.все города с country_id US
+--select city
+--from Locations
+--where country_id = 'US';
+
+
+--8. вывести зарплату сотрудника с именем 'Lex' и фамилией 'De Haan'
+--select salary
+--from Employees
+--where  first_name = 'Lex' and last_name ='De Haan'
+
+
+--9.всех сотрудников с job_id 'FI_ACCOUNT' и зарабатывающие меньше 8000
+ --select *
+ --from Employees
+ --where job_id = 'FI_ACCOUNT' and salary < 8000
+ 
+ 
+ --10. вывести сотрудников которые не платят комисии(commission_pct NULL)
+ --select *
+ --from Employees
+ --where commission_pct is null
+ 
+ 
+ --11.вывести сотрудников которые платят комисию и зарабатывают больше 10000
+ --select *
+ --from Employees
+ --where commission_pct is not null and salary>10000;
+ 
+ --12. вывести всех сотрудников кроме тех кто работает в департаментах 80 и 100 
+ --select *
+ --from Employees
+ --where department_id != 80 and 100;
+ --OR
+ --where department_id not in (80,100)
+ 
+ --13. сотрудники зарабатывают от 5000 до 7000 (включая концы)
+ --select *
+ --from Employees
+ --where salary between 5000 and 7000
+ 
+ --14. сотрудники из департамента 70 80 100
+ --select *
+ --from Employees
+ --where department_id in (70, 80, 100)
+ 
+ --15. имя фамилию сотрудников у которых номер начинается с 115
+-- select first_name, last_name
+ --from Employees
+ --where phone_NUMERIC like '515%'
+ 
+ --16. сотрудники у которых зарплата больше 1000, job_id равно IT_PROG и номер телефона начинается с 590
+ -- select *
+ --from Employees
+ --where salary>1000 and job_id = 'IT_PROG'and phone_NUMERIC like'590%'
+ 
+ --17. имя фамилию и зарплату сотрудников, у которых зарплата в интервале (8000, 10000) и у них commission_pct не null
+ --select first_name, last_name, salary
+ --from Employees
+ --where salary between 8000 and 10000 and commission_pct is not null
